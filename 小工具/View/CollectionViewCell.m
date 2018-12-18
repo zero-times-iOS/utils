@@ -10,12 +10,22 @@
 
 @implementation CollectionViewCell
 {
-    __weak IBOutlet UILabel *displayTitle;
+    __weak IBOutlet UIButton *displayTitle;
 }
 
 - (void)setTitle:(NSString *)title {
     _title = title;
-    displayTitle.text = _title;
+    [displayTitle setTitle:_title forState:(UIControlStateNormal)];
+}
+- (IBAction)click:(UIButton *)sender {
+    
+    if (_delegate) {
+        [_delegate clickAt:_indexPath];
+    }
+}
+- (void)setIsSelected:(BOOL)isSelected {
+    _isSelected = isSelected;
+    [displayTitle setSelected:_isSelected];
 }
 
 @end

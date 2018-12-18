@@ -66,22 +66,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-P7-O5n">
+                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw8-mm-6z2">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <state key="normal" title="Button"/>
+                                            <state key="selected">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="click:" destination="O2N-tV-yTH" eventType="touchUpInside" id="ChJ-AG-3hb"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="JHc-P7-O5n" firstAttribute="top" secondItem="O2N-tV-yTH" secondAttribute="top" id="Faf-k3-Pu6"/>
-                                    <constraint firstAttribute="trailing" secondItem="JHc-P7-O5n" secondAttribute="trailing" id="ITn-1g-GFk"/>
-                                    <constraint firstItem="JHc-P7-O5n" firstAttribute="leading" secondItem="O2N-tV-yTH" secondAttribute="leading" id="M4H-Rc-CEg"/>
-                                    <constraint firstAttribute="bottom" secondItem="JHc-P7-O5n" secondAttribute="bottom" id="anK-Sv-wKG"/>
+                                    <constraint firstItem="Zw8-mm-6z2" firstAttribute="leading" secondItem="O2N-tV-yTH" secondAttribute="leading" id="0T4-Fa-tVa"/>
+                                    <constraint firstItem="Zw8-mm-6z2" firstAttribute="top" secondItem="O2N-tV-yTH" secondAttribute="top" id="Bbt-4R-YgG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zw8-mm-6z2" secondAttribute="trailing" id="DZj-GZ-tXG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zw8-mm-6z2" secondAttribute="bottom" id="Iby-Pr-dds"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="displayTitle" destination="JHc-P7-O5n" id="4vN-VJ-PmQ"/>
+                                    <outlet property="displayTitle" destination="Zw8-mm-6z2" id="d7m-kq-odQ"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TextField" id="T8M-Sv-S5a" customClass="CollectionViewCellTextField">
