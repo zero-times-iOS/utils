@@ -1,0 +1,63 @@
+//
+//  PrefixHeader.pch
+//  小工具
+//
+//  Created by qianhaiboshan on 2018/12/4.
+//  Copyright © 2018年 大炮. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+
+/*=======================================
+ 工具
+ ======================================*/
+#import "AppMacro.h"                    // 宏定义
+#import "Object.h"                      // OC
+#import "AutoScrollLabel.h"             // 走马灯
+#import "iPhoneManage.h"                // 刮刮乐
+#import "ScratchCard.h"                 // 地理编码
+#import "AlertView.h"                   // Alert提示
+#import "XFetchCodeButton.h"            // 倒计时But
+#import "CacheFile.h"                   // 文件存储
+#import "FileManager.h"                 // 沙盒存储
+#import "PlistManage.h"                 // Plist存储
+#import "GCD.h"                         // 线程
+#import "Validate.h"                    // 信息验证
+#import "ProgressView.h"                // 时度圈
+#import "QRCodeImage.h"                 // 生成二维码
+#import "SWQRCodeViewController.h"      // 扫一扫
+#import "Show.h"                        // 显示视图
+#import "SBPageFlowView.h"              // 三屏复用
+#import "Time.h"                        // 定时器
+#import "UIButton+Expand.h"             // Button分类
+#import "UIColor+Hex.h"                 // 颜色处理
+#import "UIView+Expand.h"               // View分类拓展功能
+#import "UIView+StrPicker.h"            // Picker
+#import "UIView+Rounded.h"              // View切圆角
+#import "UIViewController+Photo.h"      // 吊用相机相册
+#import "Notice.h"                      // 通知封装
+#import "NSString+Extension.h"          // 字符串分类
+#import "UIImageView+Expand.h"          // ImageView分类
+#import "UILabel+Expand.h"              // Laber分类
+#import "UITextField+Expand.h"          // TextField分类
+#import "NotWorkTest.h"                 // 网络测试
+#import "Network.h"
+
+
+
+/*=======================================
+ 父类
+ ======================================*/
+#import "BasicController.h"             // Controller父类
+
+
+
+#import <ARKit/ARKit.h>
+
+
+
+#endif /* PrefixHeader_pch */
