@@ -9,8 +9,9 @@
 #import "CollectionViewController.h"
 #import "Header.h"
 #import "CollectionViewCell.h"
+#import "CollectionViewCellTextField.h"
 
-@interface CollectionViewController ()<HeaderDelegate>
+@interface CollectionViewController ()<HeaderDelegate,UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -19,10 +20,12 @@
     Boolean _firstStatus;
     Boolean _secondStatus;
     Boolean _thridStatus;
-
+    
+    CollectionViewCellTextField * _textFiledCell;
 }
 static NSString * const reuseIdentifier = @"Cell";
 static NSString * const reuseHeaderIdentifier = @"Header";
+static NSString * const reuseTextFiledIdentifier = @"TextField";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,10 +53,7 @@ static NSString * const reuseHeaderIdentifier = @"Header";
         }
         return 10;
     } else if (section == 1) {
-        if (_secondStatus) {
-            return 4;
-        }
-        return 10;
+        return 1;
     } else if (section == 2) {
         if (_thridStatus) {
             return 5;
@@ -64,13 +64,26 @@ static NSString * const reuseHeaderIdentifier = @"Header";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.title = [[NSString alloc] initWithFormat:@"%ld",(long)indexPath.row];
+    if ([indexPath section] == 1) {
+        if (!_textFiledCell) {
+            _textFiledCell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseTextFiledIdentifier forIndexPath:indexPath];
+        }
+        
+        NSLog(@": -- > %@",[_textFiledCell lowToHigh]);
+        
+        return _textFiledCell;
+    }
+    else {
+        CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+        
+        cell.title = [[NSString alloc] initWithFormat:@"%ld",(long)indexPath.row];
+        
+        // Configure the cell
+        
+        return cell;
+    }
     
-    // Configure the cell
-    
-    return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -97,6 +110,20 @@ static NSString * const reuseHeaderIdentifier = @"Header";
     }
     
     [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]];
+}
+
+#pragma mark <UICollectionViewDelegateFlowLayout>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([indexPath section] == 0) {
+        return CGSizeMake(100, 50);
+    }
+    else if ([indexPath section] == 1) {
+        return CGSizeMake(self.view.frame.size.width, 50);
+    }
+    
+    return CGSizeMake(50, 30);
 }
 
 @end

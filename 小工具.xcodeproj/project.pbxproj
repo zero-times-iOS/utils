@@ -10,6 +10,7 @@
 		0C19FF2121C89AE900BB6BD7 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19FF1F21C89AE900BB6BD7 /* Header.m */; };
 		0C19FF2521C8A7B500BB6BD7 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19FF2421C8A7B500BB6BD7 /* CollectionViewController.m */; };
 		0C19FF2821C8BE2500BB6BD7 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19FF2721C8BE2500BB6BD7 /* CollectionViewCell.m */; };
+		0C19FF2B21C9450400BB6BD7 /* CollectionViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19FF2A21C9450400BB6BD7 /* CollectionViewCellTextField.m */; };
 		3023D7B8216C4AF900C7AC02 /* Province.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3023D7B7216C4AF900C7AC02 /* Province.plist */; };
 		3024A4962186ED4B001F1709 /* AAController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3024A4952186ED4B001F1709 /* AAController.m */; };
 		3036E9D1216B24FC00C4FE69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3036E9CF216B24FC00C4FE69 /* main.m */; };
@@ -118,6 +119,8 @@
 		0C19FF2421C8A7B500BB6BD7 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		0C19FF2621C8BE2500BB6BD7 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		0C19FF2721C8BE2500BB6BD7 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		0C19FF2921C9450400BB6BD7 /* CollectionViewCellTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellTextField.h; sourceTree = "<group>"; };
+		0C19FF2A21C9450400BB6BD7 /* CollectionViewCellTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellTextField.m; sourceTree = "<group>"; };
 		3023D7B7216C4AF900C7AC02 /* Province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Province.plist; sourceTree = "<group>"; };
 		3024A4942186ED4B001F1709 /* AAController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAController.h; sourceTree = "<group>"; };
 		3024A4952186ED4B001F1709 /* AAController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAController.m; sourceTree = "<group>"; };
@@ -399,6 +402,8 @@
 				3024A4952186ED4B001F1709 /* AAController.m */,
 				0C19FF2321C8A7B500BB6BD7 /* CollectionViewController.h */,
 				0C19FF2421C8A7B500BB6BD7 /* CollectionViewController.m */,
+				0C19FF2921C9450400BB6BD7 /* CollectionViewCellTextField.h */,
+				0C19FF2A21C9450400BB6BD7 /* CollectionViewCellTextField.m */,
 				0C19FF2621C8BE2500BB6BD7 /* CollectionViewCell.h */,
 				0C19FF2721C8BE2500BB6BD7 /* CollectionViewCell.m */,
 			);
@@ -1135,6 +1140,7 @@
 				3036EAA0216B2A9B00C4FE69 /* Reachability.m in Sources */,
 				3036E9F1216B2A1C00C4FE69 /* BasicView.m in Sources */,
 				307154F021804592009832F6 /* AFURLResponseSerialization.m in Sources */,
+				0C19FF2B21C9450400BB6BD7 /* CollectionViewCellTextField.m in Sources */,
 				6D294B2C21BCE2B700BF5304 /* MJRefreshBackGifFooter.m in Sources */,
 				3036E9F0216B2A1C00C4FE69 /* BasicController.m in Sources */,
 				3036EAA4216B2A9B00C4FE69 /* SWQRCodeConfig.m in Sources */,
